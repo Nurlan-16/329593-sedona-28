@@ -20,40 +20,73 @@
       </nav>
     </header>
     <main>
-    <section><!--Внутри будет форма-->
-      <div>
-        <h2>Инфраструктура:</h2>
-        <ul>
-          <li>Бассейн</li>
-          <li>Парковка</li>
-          <li>Wi-fi</li>
-        </ul>
-      </div>
-      <div>
-        <h2>Тип жилья:</h2>
-        <ul>
-          <li>Гостиница</li>
-          <li>Мотель</li>
-          <li>Апартаменты</li>
-        </ul>
-      </div>
-      <div>
-        <h2>Стоимость в сутки (Р):</h2>
-        <ul>
-          <li>От 0</li>
-          <li>До 3000</li>
-          <li>Показать</li>
-        </ul>
-      </div>
+    <section>
+      <form action="https://echo.htmlacademy.ru" method="get" oninput="costoutput.value=cost.value">
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <ul>
+            <li>
+              <label for="filter-pool">Бассейн</label>
+              <input type="checkbox" name="pool" id="filter-pool" checked>
+            </li>
+            <li>
+              <label for="filter-parking">Парковка</label>
+              <input type="checkbox" name="parking" id="filter-parking">
+            </li>
+            <li>
+              <label for="filter-wi-fi">Wi-fi</label>
+              <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Тип жилья:</legend>
+          <ul>
+            <li>
+              <label for="filter-hotel">Гостинница</label>
+              <input type="checkbox" name="hotel" id="filter-hotel" checked>
+            </li>
+            <li>
+              <label for="filter-motel">Мотель</label>
+              <input type="checkbox" name="motel" id="filter-motel" checked>
+            </li>
+            <li>
+              <label for="filter-apartments">Апартаменты</label>
+              <input type="checkbox" name="apartments" id="filter-apartments" checked>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Стоимость в сутки (р):</legend>
+          <ul>
+            <li>
+              <input type="text" value="0">
+            </li>
+            <li>
+              <input type="text" value="3000">
+            </li>
+            <li>
+              <label for="cost-field"></label>
+              <input type="range" name="cost" id="cost-field" min="100" max="3000" step="100">
+            </li>
+          </ul>
+          <div>
+            <output name="costoutput"></output>
+          </div>
+        </fieldset>
+        <button type="submit">Показать</button>
+      </form>
     </section>
 
     <section>
       <h2>Найдено: 3</h2>
       <div>
         <h3>Сортировка</h3>
-        <button type="button">По цене</button>
-        <button type="button">По типу</button>
-        <button type="button">По рейтингу</button>
+        <ul>
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По рейтингу</a></li>
+        </ul>
       </div>
       <span>
         <a href="#">Стрелка</a>

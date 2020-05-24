@@ -38,7 +38,7 @@
       </section>
 
       <section>
-        <h2>Предложения</h2>
+        <h2 class="visually-hidden">Предложения</h2>
         <ul>
           <li>
             <h3>Жилье</h3>
@@ -70,7 +70,7 @@
       </section>
 
       <section>
-        <h2>Преимущества</h2>
+        <h2 class="visually-hidden">Преимущества</h2>
         <ul>
           <li>
             <h3>Небольшая площадь</h3>
@@ -93,14 +93,29 @@
       <section>
         <h2>Заинтересовались?</h2>
         <p>Укажите предпологаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      </section>
-      <section>
         <a href="#">Поиск гостиницы в седоне</a>
-        <!--Здесь будет форма-->
-        <p>Дата заезда:</p>
-        <p>Дата выезда:</p>
-        <p>Взрослые:</p>
-        <button type="button">Найти</button>
+      </section>
+
+      <section>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <p>
+            <label for="date-field">Дата заезда:</label>
+            <input class="calendar" type="text" name="arrival-date" id="date-field" placeholder="24 АПРЕЛЯ 2017">
+          </p>
+          <p>
+            <label for="departure-date">Дата выезда:</label>
+            <input class="calendar" type="text" name="date-of-departure" id="departure-date" placeholder="4 ИЮЛЯ 2017">
+          </p>
+          <P>
+            <label for="number-field">Взрослые:</label>
+            <input class="calendar" type="number" name="number" id="number-field" step="1" min="1" max="50" placeholder="2">
+          </P>
+          <P>
+            <label for="number-field">Дети:</label>
+            <input type="number" name="number-child" id="child-field" step="1" min="1" max="50" placeholder="0">
+          </P>
+        <button type="submit">Найти</button>
+      </form>
       </section>
 
       <div>
