@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
-  <div><!--Контейнер-->
-    <header>
+  <body class="body">
+  <div class="container">
+    <header class="header">
       <a>
-        <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип «Седона»">
+        <img class="logo" src="img/logo-sedona.svg" width="138" height="70" alt="Логотип «Седона»">
       </a>
-      <nav>
+      <nav class="nav">
         <ul>
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
@@ -19,11 +20,10 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="main">
       <section>
         <img src="img/intro-welcome.svg" width="1200" height="509" alt="Добро пожадовать в Седону">
         <p>Седона - небольшой городок в аризоне, заслуживающий большего!</p>
-        <p>Рассмотрим 5 причин по которым седона круче, чем гранд каньон</p>
       </section>
 
       <h2>Рассмотрим 5 причин по которым седона круче, чем гранд каньон</h2>
@@ -82,19 +82,25 @@
         <form action="https://echo.htmlacademy.ru" method="get">
           <p>
             <label for="date-field">Дата заезда:</label>
-            <input class="calendar" type="text" name="arrival-date" id="date-field" placeholder="24 АПРЕЛЯ 2017">
+            <input type="text" name="arrival-date" id="date-field" placeholder="24 АПРЕЛЯ 2017">
+            <button class="calendar btn-calendar"></button>
           </p>
           <p>
             <label for="departure-date">Дата выезда:</label>
-            <input class="calendar" type="text" name="date-of-departure" id="departure-date" placeholder="4 ИЮЛЯ 2017">
+            <input type="text" name="date-of-departure" id="departure-date" placeholder="4 ИЮЛЯ 2017">
+            <button class="calendar btn-calendar"></button>
           </p>
           <P>
             <label for="number-field">Взрослые:</label>
-            <input class="calendar" type="number" name="number" id="number-field" step="1" min="1" max="50" placeholder="2">
+            <button class="btn-less" type="button">-</button>
+            <input class="" type="text" name="number" id="number-field" placeholder="2">
+            <button class="more" type="button">+</button>
           </P>
           <P>
             <label for="number-field">Дети:</label>
-            <input type="number" name="number-child" id="child-field" step="1" min="1" max="50" placeholder="0">
+            <button class="btn-less" type="button">-</button>
+            <input type="text" name="number-child" id="child-field" placeholder="0">
+            <button class="more" type="button">+</button>
           </P>
         <button type="submit">Найти</button>
       </form>
@@ -104,7 +110,7 @@
         <img src="img/map.jpg" width="1199" height="594" alt="Географическая карта Седоны">
       </div>
     </main>
-    <footer>
+    <footer class="footer">
         <div>
           <a href="#">#VISITSEDONA</a>
           <p>Тел: +7(495)666-01-66</p>
